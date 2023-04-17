@@ -38,6 +38,15 @@ layout: page
   {% endfor %}
 {% endif %}
 
+
+{% for tab in site.tabs %}
+  {% if tab.title == "About" %}
+    <div id="post-list">{{ tab.content }}</div>
+  {% endif %}
+
+{% endfor %}
+
+
 <div id="post-list">
   {% for post in posts %}
     <div class="card post-preview">
